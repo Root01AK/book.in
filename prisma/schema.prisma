@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Booking {
+  id          String        @id @default(cuid())
+  refCode     String        @unique
+  status      BookingStatus @default(NEW)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  firstName   String
+  lastName    String
+  email       String
+  phone       String
+  company     String?
+  source      String?
+
+  projectName String
+  description String        @db.Text
+  budget      String
+  timeline    String
+  priority    String?
+
+  services    Json
+  isSaas      Boolean       @default(false)
+  saasDetails Json?
+
+  adminNotes  String?       @db.Text
+  assignedTo  String?
+
+  files       ProjectFile[]
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model ProjectFile {
+  id          String       @id @default(cuid())
+  bookingId   String
+  booking     Booking      @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  filename    String
+  storedName  String
+  mimeType    String
+  size        Int
+  category    FileCategory
+  url         String
+  createdAt   DateTime     @default(now())
+
+  @@index([bookingId])
+}
+
+enum BookingStatus {
+  NEW
+  REVIEWED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum FileCategory {
+  DOCUMENT
+  IMAGE
+  DESIGN
+  REFERENCE
+  OTHER
+}
