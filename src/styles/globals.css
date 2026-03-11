@@ -224,53 +224,51 @@ a:hover { color: var(--accent-hover); }
 .navbar__contact--mail:hover svg { stroke: var(--white); }
 
 /* ---------- Mobile Responsive ---------- */
+@media (max-width:768px){
 
-@media (max-width: 768px) {
-
-  .navbar__logo-img {
-    height: 24px;
+  .navbar{
+    width:92%;
+    height:64px;
+    padding:0 18px;
   }
 
-  .navbar__right {
-    gap: 12px;
+  .navbar__logo-img{
+    height:24px;
   }
 
-  .navbar__tag {
-    display: none; /* hide tagline on mobile */
+  .navbar__right{
+    gap:10px;
   }
 
-  .navbar__email {
-    display: none; /* optional: hide email on mobile */
+  .navbar__tag{
+    display:none;
   }
 
-  .navbar__contact {
-    font-size: 0.7rem;
-    padding: 6px 10px;
-    gap: 4px;
+  .navbar__email{
+    display:none;
   }
 
-  .navbar__contact svg {
-    width: 14px;
-    height: 14px;
+  .navbar__contact{
+    font-size:0.72rem;
+    padding:6px 10px;
   }
 
 }
+@media (max-width:480px){
 
-/* Extra small devices */
-
-@media (max-width: 480px) {
-
-  .navbar__right {
-    gap: 8px;
+  .navbar{
+    width:94%;
+    height:56px;
+    padding:0 14px;
+    border-radius:20px;
   }
 
-  .navbar__logo-img {
-    height: 22px;
+  .navbar__logo-img{
+    height:15px;
   }
 
-  .navbar__contact {
-    padding: 5px 8px;
-    font-size: 0.65rem;
+  .navbar__right{
+    gap:6px;
   }
 
 }
@@ -2016,4 +2014,149 @@ small{
   font-size: 0.5rem;
   text-align: center;
 }
+}
+/* ===================================
+   SMALL MOBILE FIX (≤400px)
+   =================================== */
+
+@media (max-width:400px){
+
+  .step-indicator{
+    padding:12px 10px;
+    gap:4px;
+  }
+
+  /* line behind steps */
+  .step-indicator::before{
+    left:20px;
+    right:20px;
+    top:25px;
+    height:2px;
+  }
+
+  .step-item{
+    gap:4px;
+  }
+
+  .step-item__circle{
+    width:28px;
+    height:28px;
+    font-size:0.65rem;
+  }
+
+  /* hide labels fully */
+  .step-item__label{
+    display:none;
+  }
+
+  /* make form tighter */
+  .form-body{
+    padding:16px 12px;
+  }
+
+  /* service cards smaller */
+  .service-option{
+    padding:10px 12px;
+  }
+
+  .service-option__name{
+    font-size:0.8rem;
+  }
+
+  .service-option__sub{
+    font-size:0.65rem;
+  }
+
+  .service-option__price{
+    font-size:0.65rem;
+  }
+ #booking.section{
+        padding-top:0 ;
+ }
+}
+/* ====================================
+   SERVICE CARD RESPONSIVE FIX
+   ==================================== */
+
+@media (max-width:768px){
+
+  .service-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    padding:24px;
+  }
+
+  .service-item__left{
+    max-width:100%;
+  }
+
+  .service-item__price{
+    width:100%;
+    text-align:left;
+  }
+
+}
+
+
+/* -------- MOBILE -------- */
+
+@media (max-width:480px){
+  .section--alt{
+    padding-top: 0;
+  }
+
+  .service-item{
+    padding:20px 18px;
+    gap:16px;
+  }
+
+  .service-item__name{
+    font-size:18px;
+  }
+
+  .service-item__desc{
+    font-size:14px;
+  }
+
+  .service-item__tags{
+    flex-wrap:wrap;
+  }
+
+  .service-item__price-amount{
+    font-size:24px;
+  }
+  .section__kicker{
+    padding-top: 50px;
+  }
+
+}
+
+
+/* -------- SMALL PHONES -------- */
+
+@media (max-width:400px){
+
+  .service-item{
+    padding:18px 14px;
+  }
+
+  .service-item__name{
+    font-size:17px;
+  }
+
+  .service-item__desc{
+    font-size:13px;
+    line-height:1.5;
+  }
+
+  .service-item__tag{
+    font-size:11px;
+    padding:4px 10px;
+  }
+
+  .service-item__price-amount{
+    font-size:22px;
+  }
+
 }

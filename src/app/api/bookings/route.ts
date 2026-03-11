@@ -40,9 +40,6 @@ async function sendToGoogleSheet(data: any) {
 
     const text = await res.text()
 
-    console.log("Google Sheet response status:", res.status)
-    console.log("Google Sheet response body:", text)
-
   } catch (err) {
     console.error("Google Sheet error:", err)
   }
