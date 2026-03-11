@@ -42,7 +42,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'UI / UX Design',
     description: 'Research-driven interfaces that convert visitors into customers.',
     deliverables: ['User research & personas', 'Wireframes & prototypes', 'Design system', 'Figma handoff'],
-    startingPrice: '₹25,000',
+    startingPrice: '₹6,000',
     duration: '2–4 weeks',
   },
   {
@@ -50,7 +50,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Web Development',
     description: 'High-performance websites and web apps — React, Next.js, headless CMS.',
     deliverables: ['Responsive website', 'CMS integration', 'SEO setup', 'Performance optimisation'],
-    startingPrice: '₹40,000',
+    startingPrice: '₹12,000',
     duration: '3–6 weeks',
   },
   {
@@ -58,7 +58,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'App Development',
     description: 'Native-feel mobile apps for iOS and Android — Flutter or React Native.',
     deliverables: ['iOS + Android app', 'API integration', 'App Store submission', 'Analytics'],
-    startingPrice: '₹80,000',
+    startingPrice: '₹18,000',
     duration: '6–12 weeks',
   },
   {
@@ -66,7 +66,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Ecommerce',
     description: 'Conversion-focused online stores. Shopify, WooCommerce, or fully custom.',
     deliverables: ['Store setup & design', 'Payment gateway', 'Inventory management', 'Mobile checkout'],
-    startingPrice: '₹55,000',
+    startingPrice: '₹25,000',
     duration: '4–7 weeks',
   },
   {
@@ -74,7 +74,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Custom Software',
     description: 'ERP, CRM, internal tools and automation systems for your exact workflows.',
     deliverables: ['Requirements workshop', 'Custom backend', 'Admin dashboard', 'Training & docs'],
-    startingPrice: '₹1,20,000',
+    startingPrice: '₹45,000',
     priceNote: 'Based on scope',
     duration: '8–20 weeks',
   },
@@ -83,7 +83,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Branding',
     description: 'Logo, identity, and brand guidelines. A visual language your audience remembers.',
     deliverables: ['Logo suite', 'Color & typography', 'Brand guidelines PDF', 'Asset library'],
-    startingPrice: '₹18,000',
+    startingPrice: '₹1000',
     duration: '2–3 weeks',
   },
   {
@@ -91,7 +91,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Social Media Marketing',
     description: 'Strategy, content creation, and paid ad management. Grow with purpose.',
     deliverables: ['Content calendar', 'Graphic templates', 'Ads management', 'Monthly analytics'],
-    startingPrice: '₹15,000',
+    startingPrice: '₹10,000',
     priceNote: '/month',
     duration: 'Ongoing retainer',
   },

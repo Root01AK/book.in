@@ -2107,7 +2107,7 @@ small{
   }
 
   .service-item{
-    padding:20px 18px;
+    padding:20px 1px;
     gap:16px;
   }
 
@@ -2157,6 +2157,12 @@ small{
 
   .service-item__price-amount{
     font-size:22px;
+  }
+  .container--medium{
+    padding: 0;
+  }
+  .container--narrow{
+    padding: 0;
   }
 
 }
