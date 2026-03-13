@@ -35,7 +35,7 @@ export interface BookingFormData {
   description: string
   budget: string
   timeline: string
-  priority: string
+  priority: string[]
   firstName: string
   lastName: string
   email: string
@@ -203,7 +203,7 @@ export const SOURCE_OPTIONS = [
 export const EMPTY_FORM: BookingFormData = {
   services: [], isSaasProject: false,
   saasType: '', saasUsers: '', saasFeatures: [],
-  projectName: '', description: '', budget: '', timeline: '', priority: '',
+  projectName: '', description: '', budget: '', timeline: '', priority: [],
   firstName: '', lastName: '', email: '', phone: '', company: '', source: '',
   uploadedFileIds: [],
 }
