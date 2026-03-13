@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar'
 import BookingFlow from '@/components/BookingFlow'
-import { STUDIO_SERVICES } from '@/lib/types'
+import ServicesSection from '@/components/ServicesSection'
 import Image from "next/image";
 
 export default function Home() {
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICES ─────────────────────────────────────────────── */}
+
       <section className="section section--alt">
         <div className="container--medium">
           <div className="services-header">
@@ -74,28 +74,8 @@ export default function Home() {
               Each service is priced transparently. Select what you need in the booking form below.
             </p>
           </div>
-
-          <div className="services-list">
-            {STUDIO_SERVICES.map(s => (
-              <div key={s.id} className="service-item">
-                <div className="service-item__left">
-                  <div className="service-item__name">{s.name}</div>
-                  <div className="service-item__desc">{s.description}</div>
-                  <div className="service-item__tags">
-                    {s.deliverables.map(d => (
-                      <span key={d} className="service-item__tag">{d}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="service-item__price">
-                  <span className="service-item__price-from">From</span>
-                  <span className="service-item__price-amount">{s.startingPrice}</span>
-                  {s.priceNote && <span className="service-item__price-note">{s.priceNote}</span>}
-                  <span className="service-item__price-duration">{s.duration}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+ 
+          <ServicesSection />
         </div>
       </section>
 
@@ -196,7 +176,7 @@ export default function Home() {
 
           {/* 4-column grid */}
           <div className="footer__grid">
-
+            
             {/* Col 1 – Brand */}
             <div className="footer__brand">
               <img src="/logo.png" alt="Monakin" className="footer__logo-img" />
@@ -212,7 +192,7 @@ export default function Home() {
             </div>
 
             {/* Col 2 – Services */}
-            <div>
+            <div className='service-box'>
               <p className="footer__col-title">Services</p>
               <ul className="footer__links">
                 {['Web & App Development', 'Ecommerce', 'SaaS Platform'].map(s => (
@@ -222,7 +202,7 @@ export default function Home() {
             </div>
 
             {/* Col 3 – Company */}
-            <div>
+            <div className='service-legal'>
               <p className="footer__col-title">Legal Notices</p>
               <ul className="footer__links">
                 {[
