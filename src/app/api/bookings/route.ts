@@ -10,10 +10,10 @@ const schema = z.object({
   saasUsers:        z.string().optional(),
   saasFeatures:     z.array(z.string()).optional(),
   projectName:      z.string().min(2),
-  description:      z.string().min(20),
+  description: z.string().trim().min(20).optional().or(z.literal('')),
   budget:           z.string().min(1),
   timeline:         z.string().min(1),
-  priority:         z.string().optional(),
+  priority: z.array(z.string()).optional(),
   firstName:        z.string().min(1),
   lastName:         z.string().min(1),
   email:            z.string().email(),
@@ -29,9 +29,6 @@ function makeRef(): string {
 }
 async function sendToGoogleSheet(data: any) {
   try {
-
-    console.log("Sending data to Google Sheet:", data)
-
     const res = await fetch(process.env.GOOGLE_SCRIPT_URL!, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -67,10 +64,10 @@ export async function POST(req: NextRequest) {
         company:     data.company,
         source:      data.source,
         projectName: data.projectName,
-        description: data.description,
+       description: data.description || '',
         budget:      data.budget,
         timeline:    data.timeline,
-        priority:    data.priority,
+        priority: data.priority?.join(', '),
         services:    data.services,
         isSaas:      data.isSaasProject,
         saasDetails: data.isSaasProject
@@ -91,7 +88,7 @@ export async function POST(req: NextRequest) {
   services: data.services.join(', '),
   budget: data.budget,
   timeline: data.timeline,
-  priority: data.priority,
+  priority: data.priority?.join(', '),
   source: data.source
 })
 

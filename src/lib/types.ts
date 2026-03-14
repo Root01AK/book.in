@@ -51,7 +51,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'UI / UX Design',
     description: 'Research-driven interfaces that convert visitors into customers.',
     deliverables: ['User research & personas', 'Wireframes & prototypes', 'Design system', 'Figma handoff'],
-    startingPrice: '₹25,000',
+    startingPrice: '₹5,999',
     duration: '2–4 weeks',
     detail: {
       what: 'We design product interfaces grounded in real user behaviour — not assumptions. Every screen is built to guide users toward action, reduce friction, and communicate trust. We work across web, mobile, and SaaS products.',
@@ -66,7 +66,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Web Development',
     description: 'High-performance websites and web apps — React, Next.js, headless CMS.',
     deliverables: ['Responsive website', 'CMS integration', 'SEO setup', 'Performance optimisation'],
-    startingPrice: '₹40,000',
+    startingPrice: '₹19,999',
     duration: '3–6 weeks',
     detail: {
       what: 'We build fast, accessible, and scalable websites using modern frameworks. From marketing sites to complex web applications — we write clean, maintainable code and optimise for Core Web Vitals and SEO from day one.',
@@ -81,7 +81,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'App Development',
     description: 'Native-feel mobile apps for iOS and Android — Flutter or React Native.',
     deliverables: ['iOS + Android app', 'API integration', 'App Store submission', 'Analytics'],
-    startingPrice: '₹80,000',
+    startingPrice: '₹25,999',
     duration: '6–12 weeks',
     detail: {
       what: 'We build cross-platform mobile apps that feel native — smooth animations, offline support, and hardware access. We handle everything from UX to App Store submission, so you can focus on your product.',
@@ -96,7 +96,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Ecommerce',
     description: 'Conversion-focused online stores. Shopify, WooCommerce, or fully custom.',
     deliverables: ['Store setup & design', 'Payment gateway', 'Inventory management', 'Mobile checkout'],
-    startingPrice: '₹55,000',
+    startingPrice: '₹29,000',
     duration: '4–7 weeks',
     detail: {
       what: 'We build online stores optimised for one thing — converting browsers into buyers. From product pages to checkout flow, every decision is made with conversion rate in mind. We work with Shopify, WooCommerce, and fully custom stacks.',
@@ -111,7 +111,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Custom Software',
     description: 'ERP, CRM, internal tools and automation systems for your exact workflows.',
     deliverables: ['Requirements workshop', 'Custom backend', 'Admin dashboard', 'Training & docs'],
-    startingPrice: '₹1,20,000',
+    startingPrice: '₹99,999',
     priceNote: 'Based on scope',
     duration: '8–20 weeks',
     detail: {
@@ -127,7 +127,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Branding',
     description: 'Logo, identity, and brand guidelines. A visual language your audience remembers.',
     deliverables: ['Logo suite', 'Color & typography', 'Brand guidelines PDF', 'Asset library'],
-    startingPrice: '₹18,000',
+    startingPrice: '₹3,999',
     duration: '2–3 weeks',
     detail: {
       what: 'A brand is more than a logo — it is the feeling people get when they encounter your business. We build visual identities that are distinctive, consistent, and built to grow with your company across every touchpoint.',
@@ -142,7 +142,7 @@ export const STUDIO_SERVICES: Service[] = [
     name: 'Social Media Marketing',
     description: 'Strategy, content creation, and paid ad management. Grow with purpose.',
     deliverables: ['Content calendar', 'Graphic templates', 'Ads management', 'Monthly analytics'],
-    startingPrice: '₹15,000',
+    startingPrice: '₹12,999',
     priceNote: '/month',
     duration: 'Ongoing retainer',
     detail: {
@@ -157,7 +157,7 @@ export const STUDIO_SERVICES: Service[] = [
 
 export const SAAS_FEATURES: SaasFeature[] = [
   { id: 'auth', label: 'Auth & User Management', description: 'Social login, roles, permissions' },
-  { id: 'billing', label: 'Subscription Billing', description: 'Stripe, plans, invoices' },
+  { id: 'billing', label: 'Subscription Billing', description: 'Razorpay, Stripe, plans, invoices' },
   { id: 'dashboard', label: 'Analytics Dashboard', description: 'Charts, KPIs, exports' },
   { id: 'api', label: 'Public API / Webhooks', description: 'REST or GraphQL endpoints' },
   { id: 'email', label: 'Email Automation', description: 'Transactional + drip sequences' },
